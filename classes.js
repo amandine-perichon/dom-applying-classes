@@ -8,7 +8,7 @@ function start () {
   changeDivColor('one', 'blue');
   changeDivColor('two', 'green');
   changeDivColor('three', 'orange')
-    
+  makeVisible();
   // Your turn! Create a new function called `two`, then call it from here.
 }
 
@@ -32,4 +32,12 @@ function one () {
 function changeDivColor (id, color) {
   var elem = document.getElementById(id);
   elem.classList.add(color);
+}
+
+// Function that makes the invisible div visible
+
+function makeVisible () {
+  var elem = document.getElementsByClassName('invisible')[0];
+  elem.classList.remove('invisible');
+  elem.classList.add('visible');
 }
