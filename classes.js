@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', start)
 
 function start () {
   // The first example is done for you. Uncomment the line below and reload the browser.
-  // one()
+  changeDivColor('one', 'blue');
+  changeDivColor('two', 'green');
+  changeDivColor('three', 'orange')
     
   // Your turn! Create a new function called `two`, then call it from here.
 }
@@ -23,3 +25,11 @@ function one () {
 // CREATE FUNCTION three HERE
 
 // CREATE FUNCTION makeVisible HERE
+
+
+// Function changing the color of a div, taking the div id and color in parameter
+
+function changeDivColor (id, color) {
+  var elem = document.getElementById(id);
+  elem.classList.add(color);
+}
